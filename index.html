@@ -36,16 +36,22 @@
 
 <div class="container">
     <div class="row">
-        <div class ="col-xs-6">
+        <div class ="col-md-3">
             <h2>Preferences</h2>  
-            <h3>Theme:</h3>
-            <div class="panel panel-default">
-                <div class="panel-body">light</div>
-              </div>
-              <h3>List Style</h3>
-              <div class="panel panel-default">
-                <div class="panel-body">expanded</div>
-              </div>
+            <p>Theme:</p>
+            <select name="theme" id="theme-select">
+              <option value="">light</option>
+              <option value="theme">fill-light</option>
+              <option value="theme">dark</option>
+            </select>
+
+              <p>List Style:</p>
+              <select name="list-style" id="list-select">
+                <option value="">expanded</option>
+                <option value="theme">shorten</option>
+                <option value="theme">middle</option>
+                </select>
+
         </div>
     </div>
 </div>
