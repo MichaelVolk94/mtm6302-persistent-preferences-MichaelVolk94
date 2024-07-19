@@ -1,3 +1,10 @@
 .col-md-3 {
     color: grey;
 }
+
+#main {
+    display: flex;
+}
+body {
+    display: flex;
+}
