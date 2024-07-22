@@ -1,5 +1,11 @@
 .col-md-3 {
     color: grey;
+    display: flex;
+}
+
+.col-md-9 {
+    display: flex;
+    
 }
 
 #main {
@@ -7,4 +13,7 @@
 }
 body {
     display: flex;
+}
+.container {
+ display: flex;
 }
