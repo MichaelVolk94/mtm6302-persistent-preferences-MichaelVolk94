@@ -11,9 +11,12 @@
 </head>
 <body> 
  <div id="main">
+  <section class = "list">
+    <ul id="item-list">
 <div class="container">
   <div class="col-md-9">
   <h2>List</h2>
+  <ul id="item-list">
   <div class="panel panel-default">
     <div class="panel-body">Red</div>
   </div>
@@ -35,11 +38,15 @@
   </div>
 </div>
 </div>
+</ul>
+</section>
 
+<aside class="preferences-panel"></aside>
 <div class="container">
     <div class="row">
         <div class ="col-md-3">
             <h2>Preferences</h2>  
+            <form id="preferences-form">
             <p>Theme:</p>
             <select name="theme" id="theme-select">
               <option value="">light</option>
@@ -52,6 +59,8 @@
                 <option value="theme">shorten</option>
                 <option value="theme">middle</option>
                 </select>
+              </form>
+            </aside>
 
         </div>
     </div>
