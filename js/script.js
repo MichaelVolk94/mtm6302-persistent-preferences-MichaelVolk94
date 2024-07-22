@@ -1,12 +1,20 @@
-const $main = document.getElementById('item')
 
-const colors = {
-    background: 'grey'
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const itemList = document.getElementById('item-list');
+    const preferencesForm = document.getElementById('preferences-form');
 
-function setColors(){
-    
-}
+    // Example: Add item to the list
+    function addItemToList(itemText) {
+        const li = document.createElement('li');
+        li.textContent = itemText;
+        itemList.appendChild(li);
+    }
 
-localStorage.setItem ('preferences')
-localStorage['someKey'] = 5
+    // Example: Handle form submission to add item
+    preferencesForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const newItemText = event.target.elements.item.value;
+        addItemToList(newItemText);
+        event.target.reset(); // Clear the form input
+    });
+});
