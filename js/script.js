@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const itemList = document.getElementById('item-list');
-    const preferencesForm = document.getElementById('preferences-form');
+    const themePreferences = document.getElementById('theme-select');
 
     // Example: Add item to the list
     function addItemToList(itemText) {
@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Example: Handle form submission to add item
-    preferencesForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const newItemText = event.target.elements.item.value;
-        addItemToList(newItemText);
-        event.target.reset(); // Clear the form input
+    themePreferences.addEventListener('change', function(event) {
+        const body = document.querySelector('body')
+        console.log(themePreferences.value)
+        if (themePreferences.value == 'light') {
+            body.backgroundColor = '#FFFFFF'
+        } else if (themePreferences.value == 'dark') {
+            body.backgroundColor = '#717171'
+        }
     });
 });
