@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const itemList = document.getElementById('item-list');
     const themePreferences = document.getElementById('theme-select');
@@ -13,11 +12,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Example: Handle form submission to add item
     themePreferences.addEventListener('change', function(event) {
         const body = document.querySelector('body')
-        console.log(themePreferences.value)
+        console.log(body)
         if (themePreferences.value == 'light') {
-            body.backgroundColor = '#FFFFFF'
+            body.style.backgroundColor = 'aliceblue'
         } else if (themePreferences.value == 'dark') {
-            body.backgroundColor = '#717171'
+            body.style.backgroundColor = 'black'
+            console.log(body)
+        }
+    });
+
+
+    const listPreferences =  document.getElementById('list-select')
+    listPreferences.addEventListener('change', function(event) {
+        const list = document.getElementById('item-list')
+        if (listPreferences.value == 'balck') {
+            list.style.color = 'black'
+        } else if (listPreferences.value == 'red') {
+            list.style.color = 'red'
+        } else if (listPreferences.value == 'green') {
+            list.style.color = 'green'
         }
     });
 });
